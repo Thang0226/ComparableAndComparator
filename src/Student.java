@@ -44,6 +44,7 @@ public class Student implements Comparable<Student> {
 
 	@Override
 	public int compareTo(Student student) {
-		return this.getName().compareTo(student.getName());
+		return this.getName().toLowerCase().compareTo(student.getName().toLowerCase());
+		// Without toLowerCase(), A-Z will be sorted before a-z
 	}
 }
